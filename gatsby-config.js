@@ -27,10 +27,8 @@ module.exports = {
       options: {
         typeName: `GitHub`,
         fieldName: `github`,
-        url: `https://api.github.com/graphql`,
-        headers: {
-          Authorization: `Bearer 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`,
-        },
+        url: `https://api.cybercomcreation.com/graphql`,
+      
       },
     },
   ],
