@@ -13,6 +13,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-netlify",
+    "netlify-plugin-bundle-env",
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
