@@ -1,6 +1,6 @@
 # Redirect all requests to the home page
-*    /index.html   200
-
+/*    /index.html   200
+/404    /index.html   200
 # Redirect from /old-page to /new-page
 /old-page  /new-page  301
 
