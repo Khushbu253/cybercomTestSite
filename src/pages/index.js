@@ -99,7 +99,8 @@ export async function getServerData() {
   catch (error) {
     return {
       status: 500,
-      headers: {},
+      headers: {
+        "Cache-Control": "no-cache, no-store, must-revalidate"},
       props: {},
     };
   }
