@@ -43,7 +43,9 @@ const IndexPage = ({ serverData }) => {
 };
 
 export async function getServerData() {
+
   try {
+    console.log(process.env.GATSBY_API_URL,"check url")
     const seoDetails = await fetch(`${process.env.GATSBY_API_URL}seo`);
     const footer = await fetch(`${process.env.GATSBY_API_URL}address`);
     const banner = await fetch(`${process.env.GATSBY_API_URL}default-banner`);
