@@ -14,7 +14,7 @@ import Footer from "../components/App/Footer";
 import SEO from "../components/SEO";
 
 const IndexPage = ({ serverData }) => {
-  
+  console.log(process.env.GATSBY_API_URL,"check url")
   return (
       <Layout pageName="home" seoData={serverData?.seoDetails}>
         <Banner data={serverData?.banner} />
@@ -44,64 +44,65 @@ const IndexPage = ({ serverData }) => {
 
 export async function getServerData() {
 
-  try {
-    console.log(process.env.GATSBY_API_URL,"check url")
-    const seoDetails = await fetch(`${process.env.GATSBY_API_URL}seo`);
-    const footer = await fetch(`${process.env.GATSBY_API_URL}address`);
-    const banner = await fetch(`${process.env.GATSBY_API_URL}default-banner`);
-    const solution = await fetch(`${process.env.GATSBY_API_URL}solution`);
-    const serviceSolutions = await fetch(
-      `${process.env.GATSBY_API_URL}service-solutions`
-    );
-    const servicesOne = await fetch(
-      `${process.env.GATSBY_API_URL}services-one`
-    );
-    const servicesTwo = await fetch(
-      `${process.env.GATSBY_API_URL}services-two`
-    );
-    const features = await fetch(`${process.env.GATSBY_API_URL}our-features`);
-    const RecentProjects = await fetch(
-      `${process.env.GATSBY_API_URL}recent-projects`
-    );
-    const projects = await fetch(`${process.env.GATSBY_API_URL}projects`);
-    const Testimonials = await fetch(
-      `${process.env.GATSBY_API_URL}testimonials`
-    );
-    const Partner = await fetch(`${process.env.GATSBY_API_URL}partner`);
-    const OurBlog = await fetch(`${process.env.GATSBY_API_URL}blogs`);
-    const ProjectStartArea = await fetch(
-      `${process.env.GATSBY_API_URL}start-your-project`
-    );
-    // if (!res.ok) {
-    //   throw new Error(`Response failed`)
-    // }
+  // try {
+  //   console.log(process.env.GATSBY_API_URL,"check url")
+  //   const seoDetails = await fetch(`${process.env.GATSBY_API_URL}seo`);
+  //   const footer = await fetch(`${process.env.GATSBY_API_URL}address`);
+  //   const banner = await fetch(`${process.env.GATSBY_API_URL}default-banner`);
+  //   const solution = await fetch(`${process.env.GATSBY_API_URL}solution`);
+  //   const serviceSolutions = await fetch(
+  //     `${process.env.GATSBY_API_URL}service-solutions`
+  //   );
+  //   const servicesOne = await fetch(
+  //     `${process.env.GATSBY_API_URL}services-one`
+  //   );
+  //   const servicesTwo = await fetch(
+  //     `${process.env.GATSBY_API_URL}services-two`
+  //   );
+  //   const features = await fetch(`${process.env.GATSBY_API_URL}our-features`);
+  //   const RecentProjects = await fetch(
+  //     `${process.env.GATSBY_API_URL}recent-projects`
+  //   );
+  //   const projects = await fetch(`${process.env.GATSBY_API_URL}projects`);
+  //   const Testimonials = await fetch(
+  //     `${process.env.GATSBY_API_URL}testimonials`
+  //   );
+  //   const Partner = await fetch(`${process.env.GATSBY_API_URL}partner`);
+  //   const OurBlog = await fetch(`${process.env.GATSBY_API_URL}blogs`);
+  //   const ProjectStartArea = await fetch(
+  //     `${process.env.GATSBY_API_URL}start-your-project`
+  //   );
+  //   // if (!res.ok) {
+  //   //   throw new Error(`Response failed`)
+  //   // }
 
-    // console.log(servicesOne, servicesTwo);
-    return {
-      props: {
-        seoDetails: await seoDetails.json(),
-        footer: await footer.json(),
-        banner: await banner.json(),
-        solution: await solution.json(),
-        serviceSolutions: await serviceSolutions.json(),
-        features: await features.json(),
-        servicesOne: await servicesOne.json(),
-        servicesTwo: await servicesTwo.json(),
-        recentProjects: await RecentProjects.json(),
-        projects: await projects.json(),
-        Testimonials: await Testimonials.json(),
-        Partner: await Partner.json(),
-        OurBlog: await OurBlog.json(),
-        ProjectStartArea: await ProjectStartArea.json(),
-      },
-    };
-  } catch (error) {
-    return {
-      status: 500,
-      headers: {},
-      props: {},
-    };
-  }
+  //   // console.log(servicesOne, servicesTwo);
+  //   return {
+  //     props: {
+  //       seoDetails: await seoDetails.json(),
+  //       footer: await footer.json(),
+  //       banner: await banner.json(),
+  //       solution: await solution.json(),
+  //       serviceSolutions: await serviceSolutions.json(),
+  //       features: await features.json(),
+  //       servicesOne: await servicesOne.json(),
+  //       servicesTwo: await servicesTwo.json(),
+  //       recentProjects: await RecentProjects.json(),
+  //       projects: await projects.json(),
+  //       Testimonials: await Testimonials.json(),
+  //       Partner: await Partner.json(),
+  //       OurBlog: await OurBlog.json(),
+  //       ProjectStartArea: await ProjectStartArea.json(),
+  //     },
+  //   };
+  // } 
+  // catch (error) {
+  //   return {
+  //     status: 500,
+  //     headers: {},
+  //     props: {},
+  //   };
+  // }
 }
 // export const Head = () =><><meta name="check on ssr" content="test meta"/>  <title>Home Page</title></>;
 
