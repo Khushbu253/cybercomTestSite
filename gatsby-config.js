@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `CybercomWeb`,
-    siteUrl: `http://192.168.0.204:1330/graphql`,
+    siteUrl: `https://api.cybercomcreation.com/graphql`,
   },
   plugins: [
     "gatsby-plugin-image",
