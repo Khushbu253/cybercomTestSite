@@ -4,7 +4,9 @@
 const IndexPage=({serverData})=>{
 console.log(serverData,"check url")
   return ( 
-  <><h1>hello world</h1></>
+  <><h1>hello world</h1>
+  {console.log(serverData,"check url")}
+  </>
   )
 }
 export async function getServerData() {
@@ -12,7 +14,7 @@ export async function getServerData() {
     try {
       // console.log(process.env.GATSBY_API_URL,"check url")
       const test = await fetch(`https://dummyjson.com/products/1`);
-     
+     console.log(test,"test here")
       if (!res.ok) {
         throw new Error(`Response failed`)
       }
