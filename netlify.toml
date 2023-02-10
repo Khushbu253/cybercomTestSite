@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = 'npm run build'
   publish = "public"
 
 [[redirects]]
@@ -13,7 +13,7 @@
   status = 302
 
 [context.production.environment]
-  GATSBY_API_URL=https://api.cybercomcreation.com/
+  GATSBY_API_URL="https://api.cybercomcreation.com/"
 
 [context.environment]
- GATSBY_API_URL=https://api.cybercomcreation.com/
+ GATSBY_API_URL="https://api.cybercomcreation.com/"
