@@ -1,11 +1,40 @@
 
  import * as React from "react";
 
-const IndexPage=()=>{
+const IndexPage=({serverData})=>{
+console.log(serverData,"check url")
   return ( 
   <><h1>hello world</h1></>
   )
 }
+export async function getServerData() {
+
+    try {
+      // console.log(process.env.GATSBY_API_URL,"check url")
+      const test = await fetch(`https://dummyjson.com/products/1`);
+     
+      if (!res.ok) {
+        throw new Error(`Response failed`)
+      }
+  
+  
+      return {
+        props: {
+          test: await test.json(),
+         
+        },
+      };
+    } 
+    catch (error) {
+      return {
+        status: 500,
+        headers: {
+          "Cache-Control": "no-cache"
+        },
+        props: {},
+      };
+    }
+   }
 export default IndexPage;
 
 // import * as React from "react";
