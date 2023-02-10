@@ -100,7 +100,8 @@ export async function getServerData() {
     return {
       status: 500,
       headers: {
-        "Cache-Control": "no-cache, no-store, must-revalidate"},
+        "Cache-Control": "no-cache"
+      },
       props: {},
     };
   }
