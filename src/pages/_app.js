@@ -9,10 +9,8 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatic
 // TagManager.initialize(tagManagerArgs)
 
 const App = ({ Component, pageProps }) => {
-  return <>
-  <script src="index.js?v=1.0.0"></script>
-  <Component {...pageProps} />;
-  </>
-};
+  return <Component {...pageProps} />;
 
+};
+export const Head = () => <script src="app.js?v=1.0.0"></script>;
 export default App;
