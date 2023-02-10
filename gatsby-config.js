@@ -13,7 +13,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-netlify",
-    "netlify-plugin-bundle-env",
+    "gatsby-plugin-html-attributes",
     {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
@@ -21,15 +21,6 @@ module.exports = {
       },
       options: {
         apiKey: process.env.API_KEY,
-      },
-    },
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: `GitHub`,
-        fieldName: `github`,
-        url: `https://api.cybercomcreation.com/graphql`,
-      
       },
     },
   ],
