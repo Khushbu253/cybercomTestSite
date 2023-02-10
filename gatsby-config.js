@@ -9,6 +9,9 @@ module.exports = {
     title: `CybercomWeb`,
     siteUrl: `https://api.cybercomcreation.com/graphql`,
   },
+  flags: {
+    DEV_SSR: true
+  },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
