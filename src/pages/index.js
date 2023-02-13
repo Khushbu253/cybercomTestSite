@@ -3,7 +3,11 @@ import * as React from "react";
 const IndexPage = ({ serverData }) => {
   console.log(serverData?.footer?.description);
   return (
+    <>
+    <div>test static data</div>
      <div>{serverData?.footer?.description}---test</div>
+    </>
+    
   );
 };
 

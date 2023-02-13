@@ -12,5 +12,4 @@ const App = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;
 
 };
-export const Head = () => <script src="app.js?v=1.0.0"></script>;
 export default App;
