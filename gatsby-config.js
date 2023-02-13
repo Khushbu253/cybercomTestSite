@@ -1,13 +1,13 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
- require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+//  require("dotenv").config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// })
 module.exports = {
   siteMetadata: {
     title: `CybercomWeb`,
-    siteUrl: `https://cybercom-test-site.vercel.app/graphql`,
+    siteUrl: `https://cybercom-test-site.vercel.app`,
   },
   flags: {
     DEV_SSR: true
