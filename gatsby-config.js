@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `CybercomWeb`,
-    siteUrl: `cybercom-test-site.vercel.app`,
+    siteUrl: `https://cybercom-test-site.vercel.app`,
   },
   flags: {
     DEV_SSR: true
